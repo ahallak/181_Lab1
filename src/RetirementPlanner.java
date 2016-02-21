@@ -5,13 +5,13 @@ import java.text.NumberFormat;
  */
 
 /**
- * @author Akash
+ * Lab 1: Akash Sharma, Amjed Hallak, William Starcher, Adam Tran, Matt Billone
  *
  */
 public class RetirementPlanner 
 {
 
-	private static double numberOfYears;
+	private static double numberOfYears; //Variable declaration
 	private static double AnnualReturn;
 	private static double RetiredYears;
 	private static double AnnualRetirment;
@@ -29,7 +29,7 @@ public class RetirementPlanner
 		NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
 		System.out.println("In order to achieve your retirement goals you need to save: " + defaultFormat.format(SaveMonthly) + " each month and have a total of: " +  defaultFormat.format(TotalSaving) + " saved by retirement");
 	}
-	public static void UserInput()
+	public static void UserInput() //Collects input from user for filling in the variables
 	{
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter your number of years left to work:");
@@ -66,7 +66,7 @@ public class RetirementPlanner
 	}
 	
 	private static double TotalSavingCalculator(double RequiredIncome, double MonthlySSIncome, double AnnualRetirment,double RetiredYears, double AnnualReturn)
-	{
+	{ //Calculations
 		RetirementPlanner.RequiredIncome = RequiredIncome;
 		RetirementPlanner.MonthlySSIncome = MonthlySSIncome;
 		RetirementPlanner.AnnualRetirment = AnnualRetirment;
@@ -79,7 +79,7 @@ public class RetirementPlanner
 	}
 	
 	private static double MonthlySavingCalculator(double TotalSaving, double AnnualReturn, double numberOfYears)
-	{
+	{ //More calculations
 		RetirementPlanner.TotalSaving = TotalSaving;
 		RetirementPlanner.AnnualReturn = AnnualReturn;
 		RetirementPlanner.numberOfYears = numberOfYears;
